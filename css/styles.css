@@ -1,0 +1,174 @@
+body{
+  width: 1440px;
+   /* there should be no default padding or margin from the browser */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+  Font-size: 15px;
+}
+section{
+  width: 100vw;
+  position: relative;
+  height : 100vh;
+}
+#bottom-image{
+  position: absolute;
+  right : 0;
+}
+#container{
+  position: absolute;
+  /* we'd like our image to take 75% of the screen and position it to always be
+  in the middle */
+  width: 72vw;
+  left : 12%;
+  top : 14%;
+  height: 75%;
+}
+#header{
+  position : absolute;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  /*font-size: 46px; /* 2.694vw = 46px. our heading can be more responsive as the screen size changes */
+  /*width:400px; /* always be 40% of the parent element */
+  width : 23.423vw;
+  font-size: 2.694vw;
+}
+#introduction{
+  width: 500px;
+  position: absolute;
+  top : 26%;
+  color : hsl(303, 10%, 53%);
+}
+#reviews, #report-guru, #BestTech{
+  position : absolute;
+  padding: 10px 60px 10px 20px;
+  background-color: hsl(300, 24%, 96%);
+  color : hsl(300, 43%, 22%);
+  font-weight: 700;
+  border-radius: 10px;
+  height : 20px;
+  width: 320px;
+}
+#reviews{
+/*  right : -700px;*/
+  right:195px;
+}
+#report-guru{
+  width: 340px; /* override 320px padding right */
+  /*right : -730px;*/
+  right : 110px;
+  right : 130px;
+  top : 55px;
+  padding-right: 40px; /* override 60px padding right */
+}
+#BestTech{
+  top : 110px;
+/*  right : -720px;*/
+  right:65px;
+}
+#colton, #irene, #anne{
+  position:  absolute;
+  bottom : 30px;
+  /*width : 300px;*/
+  width : 17.875vw; /* 300px = 17.875vw */
+  padding:30px;
+  background-color:  hsl(300, 43%, 22%);
+  border-radius: 10px;
+  color : white;
+  font-size:0.952vw;
+}
+#colton p, #irene p, #anne p{
+  clear : left;
+}
+.image{
+  width: 40px;
+  border-radius: 100px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+#irene{
+  /*left : 400px; */
+  left : 32%; /*making it responsive */
+  bottom : 15px; /* override 30px */
+}
+#anne{
+  /*left : 800px;*/
+  left : 64%;
+  bottom : 0; /* override 30px **/
+}
+.attribution{
+  position: absolute;
+  bottom: 15px;
+  left : 10px;
+  font-size: 16px;
+  color: hsl(228, 45%, 44%);
+}
+.Verified{
+  opacity: 0.3; /* we've to reduce the opacity to 30% of the parent */
+}
+.span{
+  margin-right: 20px;
+  display:inline-block;
+}
+/* media queries */
+@media screen and (max-width: 1256px){ /* if the size of the screen is 1256px or smaller */
+  #container{
+
+  }
+  section{
+    height:1900px;
+    text-align: center;
+  }
+  #header{
+    left: 24.390vw;
+  }
+  #introduction{
+    left:25%;
+    top : 180px;
+  }
+  #reviews{
+    top : 300px;
+    height: 60px;
+    left : 25%;
+    width: 26.778vw;
+  }
+  #report-guru{
+    top : 400px;
+
+    height: 60px;
+    left : 25%;
+    width: 26.778vw;
+    padding-right:60px; /* override 40px of padding right */
+  }
+  #BestTech{
+    top : 500px;
+    height: 60px;
+    left : 25%;
+    width: 26.778vw;
+  }
+  .span{
+    display : block;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+  #colton, #irene, #anne{
+    top:650px;
+    bottom: unset; /* bottom was 30px and now we remove it */
+    left : 25%;
+    width: 26.778vw;
+    padding: 43px;
+    font-size: 15px;
+  }
+  #irene{
+    top:925px;
+  }
+  #anne{
+    top: 1200px;
+  }
+  #bottom-image{
+    width: 600px;
+    height: 2200px;
+  }
+}
